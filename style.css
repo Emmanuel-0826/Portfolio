@@ -8,7 +8,7 @@
 /* Body Styling */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   background-color: #f4f4f9;
   color: #333;
 }
@@ -17,6 +17,9 @@ body {
 header {
   background: #222;
   padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -26,24 +29,26 @@ header {
 }
 
 .nav-links li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: #ff9800;
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
 }
@@ -53,76 +58,94 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   text-align: center;
 }
 
 .hero-text {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
 .btn {
   background: #ff9800;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
   background: #e68900;
+  transform: scale(1.05);
 }
 
 /* Profile Image */
 .profile-img {
-  width: 220px;
+  width: 240px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
 /* Content Sections */
 .content {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2.5rem;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
 }
 
 .content h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: #2575fc;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .content p {
   margin-bottom: 1rem;
+  font-size: 1.05rem;
 }
 
 /* Projects */
 .project {
   margin-bottom: 2rem;
-  padding: 1rem;
-  border-left: 4px solid #2575fc;
+  padding: 1.5rem;
+  border-left: 5px solid #2575fc;
   background: #f9f9ff;
-  border-radius: 5px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-3px);
 }
 
 .project h2 {
   margin-bottom: 0.5rem;
   color: #6a11cb;
+  font-size: 1.5rem;
 }
 
 .project a {
@@ -148,10 +171,11 @@ header {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-family: inherit;
+  transition: border-color 0.3s ease;
 }
 
 .contact-form input:focus,
@@ -162,31 +186,34 @@ header {
 
 .contact-form button {
   margin-top: 15px;
-  padding: 10px;
+  padding: 12px;
   background: #2575fc;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
   background: #6a11cb;
+  transform: scale(1.03);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.2rem;
   background: #222;
   color: #fff;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 footer a {
   color: #ff9800;
   text-decoration: none;
+  font-weight: 600;
 }
 
 footer a:hover {
@@ -200,7 +227,7 @@ footer a:hover {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .hero-container {
@@ -208,6 +235,6 @@ footer a:hover {
   }
 
   .content {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 }
